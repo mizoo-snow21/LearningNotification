@@ -15,7 +15,7 @@ def notification_learning_result(url, message, last_loss, last_accuracy) -> None
     last_accuracy : float
         最後のepochのaccuracy。
     """
-    slack = slackweb.Slack(url="Your IncomigWebfooks APIKey")
+    slack = slackweb.Slack(url="Your IncomigWebfooks URL")
     blocks = [{
         "type": "section",
         "text": {
@@ -29,7 +29,7 @@ def notification_learning_result(url, message, last_loss, last_accuracy) -> None
                 "text": "Click"
             },
             "value": "click_me_123",
-            "url": "Your page url",
+            "url": "Your page URL",
             "action_id": "button-action"
         }
     }]
